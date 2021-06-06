@@ -1,10 +1,22 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 
+import CartContext from "../../../store/use-context";
 import MealItemForm from "./MealItemForm";
-import classes from "./MealsItem.module.css";
+import classes from "./MealItem.module.css";
 
 const MealsItem = (props) => {
+  const ctx = useContext(CartContext);
+  
   const price = `₹${props.price.toFixed(2)}`;
+
+  const addToCart = (amount) => {
+    ctx.addItem({
+      name:props.name,
+      price:props.price,
+      amount:amount
+    })
+  }
+
   return (
     <Fragment>
       <div className={classes["list-item"]}>
@@ -16,7 +28,7 @@ const MealsItem = (props) => {
           <li className={classes["list-item-price"]}>{price}</li>
         </div>
         <div className={classes.summary}>
-          <MealItemForm />
+          <MealItemForm  updateCount = {addToCart}/>
         </div>
       </div>
     </Fragment>

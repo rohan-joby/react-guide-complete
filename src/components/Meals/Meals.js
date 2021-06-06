@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import MealsSummary from "./MealsSummary";
 import MealsItems from "./MealsItems";
-import MealsItem from "./MealsItem/MealsItem";
+import MealsItem from "./MealsItem/MealItem";
 import classes from "./Meals.module.css";
 
 const Meals = () => {
