@@ -1,0 +1,24 @@
+
+.list-item {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .list-item-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height:1.5;
+  }
+  .list-item-price{
+      color:rgb(110, 0, 0);
+      font-size:1.25rem;
+      font-weight: 700;
+      margin-top:10px;
+  }
+
+  .summary{
+    text-align: center;
+  }

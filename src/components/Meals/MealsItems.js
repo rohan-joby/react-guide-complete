@@ -2,15 +2,21 @@
 const MealsItems = [
     {
       id: 1,
-      name: "Sushi",
-      description: "Finest fish and veggies",
-      price: 23.99,
+      name: "Dragon Chicken",
+      description: "Indo-Chinese chicken dish",
+      price: 289.99,
     },
     {
       id: 2,
-      name: "Schnitzel",
-      description: "A german specialty!",
-      price: 16.99,
+      name: "Kanthaari Meen",
+      description: "A must try for spice lovers!",
+      price: 325,
+    },
+    {
+      id: 3,
+      name: "Ghee Masla Dosa",
+      description: "A South Indian fermented crepe",
+      price: 77,
     },
   ]
 
