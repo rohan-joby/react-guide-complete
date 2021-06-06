@@ -4,7 +4,7 @@ import MealItemForm from "./MealItemForm";
 import classes from "./MealsItem.module.css";
 
 const MealsItem = (props) => {
-  const price = `$${props.price.toFixed(2)}`;
+  const price = `₹${props.price.toFixed(2)}`;
   return (
     <Fragment>
       <div className={classes["list-item"]}>

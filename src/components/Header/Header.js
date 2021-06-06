@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <Fragment>
             <nav className={classes.navigation}>
-                <h2 className="logo">MealsOrder</h2>
+                <h2 className="logo">MealSafe</h2>
                 <HeaderButton />
             </nav>
         </Fragment>

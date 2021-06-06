@@ -10,7 +10,7 @@
   .list-item-name {
     font-size: 1.3rem;
     font-weight: bold;
-    line-height:1.5;
+    padding-bottom: 1em;
   }
   .list-item-price{
       color:rgb(110, 0, 0);
@@ -22,3 +22,10 @@
   .summary{
     text-align: center;
   }
+
+  @media only screen and (max-width:800px){
+    .list-item-name{
+      padding-bottom: .3em;
+    }
+  }
+  

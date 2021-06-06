@@ -3,3 +3,9 @@
     color:rgb(68, 0, 0);
     padding-right: 5px;
 }
+
+@media only screen and (max-width:800px){
+    .summary-name{
+      padding-bottom: .3em;
+    }
+  }
