@@ -15,6 +15,7 @@ const Meals = () => {
             id={item.id}
             name={item.name}
             description={item.description}
+            amount={item.amount}
             price={item.price}
           />
         );

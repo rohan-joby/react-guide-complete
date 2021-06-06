@@ -8,7 +8,7 @@ const Cart = (props) => {
     <Modal closeCart={props.closeCart}>
       <h2>Dosa</h2>
       <p>count:2</p>
-      <button onClick={props.closeCart}>Close</button>
+      <button className={classes.btn} onClick={props.closeCart}>Close</button>
     </Modal>
   );
 };

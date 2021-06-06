@@ -13,10 +13,10 @@ const MealsItem = (props) => {
           <li className={classes["list-item-description"]}>
             <em>{props.description}</em>
           </li>
+          <li className={classes["list-item-price"]}>{price}</li>
         </div>
         <div className={classes.summary}>
           <MealItemForm />
-          <li className={classes["list-item-price"]}>{price}</li>
         </div>
       </div>
     </Fragment>

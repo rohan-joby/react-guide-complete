@@ -19,9 +19,7 @@
       margin-top:10px;
   }
 
-  .summary{
-    text-align: center;
-  }
+  
 
   @media only screen and (max-width:800px){
     .list-item-name{
