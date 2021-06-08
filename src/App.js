@@ -18,9 +18,9 @@ const App = () => {
 
   return (
     <CartProvider>
-      <Header showCart={handleOpenCart}/>
-      <Meals />
       {cartIsShown && <Cart closeCart={handleCloseCart}/>}
+      <Header showCart={handleOpenCart}/>
+      <main><Meals /></main>
     </CartProvider>
   );
 };

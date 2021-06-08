@@ -5,11 +5,12 @@
 }
 .form-button{
   display: block;
-  padding:.2em 1em;
+  font-size: 1.1rem;
+  padding:7px 18px;
   color:white;
   margin-top:1em;
   background-color: hsl(192, 100%, 26%);
-  border-radius:5px;
+  border-radius:8px;
 }
 
 

@@ -15,14 +15,21 @@ const cartReducer = (state, action) => {
     let newItem;
     let newItems;
     if (existingItem) {
-      newItem = { ...existingItem, amount: action.item.amount };
-      newItems = [state.items];
+      newItem = { ...existingItem, amount: existingItem.amount + action.item.amount };
+      newItems = [...state.items];
       newItems[existingItemIndex] = newItem;
 
       return { items: newItems, totalAmount: newTotalAmount };
     }
-  }
-  
+    else{
+        newItem={
+          ...action.item
+        }
+        newItems = state.items.concat(newItem);
+      }
+      return { items: newItems, total: newTotalAmount };
+    }
+
   if (action.type === "DELETE") {
     const existingItemIndex = state.items.findIndex(
       (item) => item.id === action.id
@@ -54,7 +61,7 @@ const CartProvider = (props) => {
     cartAction({ type: "DELETE", id: id });
   };
 
-  cartState = {
+  const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
     addItem: addToCart,
@@ -62,7 +69,7 @@ const CartProvider = (props) => {
   };
 
   return (
-    <CartContext.Provider value={cartState}>
+    <CartContext.Provider value={cartContext}>
       {props.children}
     </CartContext.Provider>
   );
