@@ -5,17 +5,15 @@ import CartContext from "./use-context";
 const defaultState = { items: [], totalAmount: 0 };
 const cartReducer = (state, action) => {
   if(action.type === "ADD"){
-    const newTotalAmount = state.items.reduce((current,total) => {return current.amount + total})
-    const newItems = state.items.concat(action.item)
     return { 
-      items:newItems,
-      totalAmount:newTotalAmount
+      items:state.items,
+      totalAmount:state.totalAmount
     }
   }
   return { items: state.items, total: state.totalAmount };
 };
 
-const ContextProvider = (props) => {
+const CartProvider = (props) => {
   const [cartState, cartAction] = useReducer(cartReducer, defaultState);
 
   const addToCart = (item) => {
@@ -39,4 +37,4 @@ const ContextProvider = (props) => {
   );
 };
 
-export default ContextProvider;
+export default CartProvider;
