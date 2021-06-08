@@ -4,11 +4,13 @@ import classes from "./MealItemForm.module.css";
 
 const MealItemForm = (props) => {
     const inputRef = useRef();
-
+    const amount = inputRef.current.value;
+    const amountNumber = +amount;
+    
     const submitHandler = (e) => {
         e.preventDefault();
-        const amount = inputRef.current.value;
-        props.updateCount(amount);
+        
+        props.updateCount(amountNumber);
     }
 
     return (
