@@ -4,13 +4,13 @@ import CartContext from "../../../store/use-context";
 import MealItemForm from "./MealItemForm";
 import classes from "./MealItem.module.css";
 
-const MealsItem = (props) => {
-  const ctx = useContext(CartContext);
+const MealItem = (props) => {
+  const cartCtx = useContext(CartContext);
   
   const price = `₹${props.price.toFixed(2)}`;
 
   const addToCart = (amount) => {
-    ctx.addItem({
+    cartCtx.addItem({
       id:props.id,
       name:props.name,
       price:props.price,
@@ -36,4 +36,4 @@ const MealsItem = (props) => {
   );
 };
 
-export default MealsItem;
+export default MealItem;

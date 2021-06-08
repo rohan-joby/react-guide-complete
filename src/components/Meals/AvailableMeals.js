@@ -1,4 +1,4 @@
-import MealsItem from "./MealsItem/MealItem";
+import MealItem from "./MealsItem/MealItem";
 import classes from "./AvailableMeals.module.css";
 
 const DUMMY_MEALS = [
@@ -27,7 +27,7 @@ const AvailableMeals = () => {
     <ul className={classes.container}>
       {DUMMY_MEALS.map((item) => {
         return (
-          <MealsItem
+          <MealItem
             key={item.id}
             id={item.id}
             name={item.name}
