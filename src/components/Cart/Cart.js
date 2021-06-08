@@ -24,8 +24,8 @@ const Cart = (props) => {
           name={item.name}
           price={item.price}
           amount={item.amount}
-          onAdd={addToCart}
-          onDelete={removeFromCart}
+          onAdd={()=>addToCart(item)}
+          onDelete={()=>removeFromCart(item.id)}
         />
       ))}
       <button className={classes.btn} onClick={props.closeCart}>
